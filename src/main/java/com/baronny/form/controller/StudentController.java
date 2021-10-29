@@ -24,8 +24,8 @@ public class StudentController {
     if (null != errors && errors.getErrorCount() > 0){
         return "index";
     } else {
-        model.addAttribute("sucessMsg", "Salvo com sucesso");
-        return "sucess";
+        model.addAttribute("successMsg", "Salvo com sucesso!");
+        return "success";
     }
     }
 }

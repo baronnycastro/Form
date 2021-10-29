@@ -25,14 +25,10 @@ public class Student {
     @Max(value = 8, message = "Escolha no máximo 4 matérias!")
     private int subjectCount;
 
-    @NotNull
-    @Min(1)
-    @Max(12)
-    private int grade;
 
     @NotNull
-    @Size(max = 10, min = 10, message = "Número do celular deve ter incluir o DDD")
-  //  @Pattern(regexp = "[7-9][0-9]{9}", message = "Número inválido!")
+    @Size(max = 11, min = 11, message = "Número do celular deve incluir o DDD")
+    @Pattern(regexp = "[1-9][0-9]{10}", message = "Número inválido!")
     private String mobileNo;
 
     @NotNull(message = "Insira a data de nascimento")
@@ -52,12 +48,7 @@ public class Student {
     public void setSubjectCount(int subjectCount) {
         this.subjectCount = subjectCount;
     }
-    public int getGrade() {
-        return grade;
-    }
-    public void setGrade(int grade) {
-        this.grade = grade;
-    }
+  
     public String getMobileNo() {
         return mobileNo;
     }
